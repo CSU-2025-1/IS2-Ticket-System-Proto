@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package users;
+
+option go_package = "users.v1";
+
+service Users {
+  rpc GetUsersByGroupID (GetUsersByGroupIDRequest) returns (GetUsersByGroupIDResponse);
+}
+
+
+message GetUsersByGroupIDRequest {
+  string group_id = 1;
+}
+
+message GetUsersByGroupIDResponse {
+  repeated string user_uuid = 1;
+}

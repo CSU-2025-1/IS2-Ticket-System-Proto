@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package auth;
+
+option go_package = "auth.v1";
+
+service Auth {
+  rpc IntrospectToken (IntrospectTokenRequest) returns (IntrospectTokenResponse);
+}
+
+
+message IntrospectTokenRequest {
+  string token = 1;
+}
+
+message IntrospectTokenResponse {
+  string user_uuid = 1;
+}
