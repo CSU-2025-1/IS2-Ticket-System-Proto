@@ -1,4 +1,4 @@
-module proto
+module github.com/CSU-2025-1/IS2-Ticket-System-Proto
 
 go 1.24.0
 
